@@ -2,14 +2,14 @@
  ## Project Description
 RaceDay is a comprehensive event management platform designed to streamline the organization and participation in road running, walking, and cycling events across South Africa. It addresses the challenges of event registration, participant management, and result tracking, providing a user-friendly interface for both Organisers and Participants.
 
-User Roles
+### User Roles
 Organiser
 Organisers have the ability to create, update, and delete events. They can manage categories for each event and view enrolments and results, ensuring a smooth operation of the events they oversee.
 
-Participant
+### Participant
 Participants can register for events, select categories, and view their enrolments and results. This role is designed to enhance the user experience, making it easy for individuals to engage in their preferred activities.
 
-Part 1
+## Part 1
 ERD: The ERD outlines the relationships and attributes of the system's entities.
 API Endpoint Plan: A structured plan for the API endpoints that facilitate user interactions.
 SQL Database Script: A script to create the necessary database structure and seed it with initial data.
