@@ -1,28 +1,21 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET
-
+name: Part 1 Documentation Check
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+ push:
+ pull_request:
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+ validate-part1:
+ runs-on: ubuntu-latest
+ steps:
+  - name: Checkout repository
+ uses: actions/checkout@v4
+ - name: Check docs folder
+ run: test -d docs
+ - name: Check ERD
+ run: test -f docs/RaceDay_ERD.pdf
+ - name: Check API Endpoint Plan
+ run: test -f docs/RaceDay_API_Endpoint_Plan.pdf
+ - name: Check SQL Script
+ run: test -f docs/RaceDay_Database.sql
+ - name: Check README
+ run: test -f README.md
